@@ -46,13 +46,12 @@ export default Seletor = () => {
     }
   }, [tipoSelecionado, pokemonsIniciais]);
 
-  // Efeito para buscar a imagem do Pokémon quando ele é selecionado
   useEffect(() => {
     if (pokemon) {
       fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
         .then((response) => response.json())
         .then((dados) => {
-          setPokemonImage(dados.sprites.front_default); // Atualiza o estado com a URL da imagem
+          setPokemonImage(dados.sprites.front_default);
         })
         .catch((error) => console.error('Erro ao buscar detalhes do Pokémon:', error));
     }
