@@ -8,7 +8,7 @@ export default Seletor = () => {
   const [pokemonsIniciais, setPokemonsIniciais] = useState([]);
   const [tipos, setTipos] = useState([]);
   const [tipoSelecionado, setTipoSelecionado] = useState('');
-  const [pokemonImage, setPokemonImage] = useState(null); // Novo estado para armazenar a imagem do Pokémon
+  const [pokemonImage, setPokemonImage] = useState(null);
 
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/type')
@@ -88,8 +88,7 @@ export default Seletor = () => {
         </Picker>
 
         {pokemon ? <Text style={styles.selectedText}>Você selecionou {pokemon}</Text> : null}
-
-        {/* Exibe a imagem do Pokémon selecionado */}
+        
         {pokemonImage && (
           <Image
             source={{ uri: pokemonImage }}
