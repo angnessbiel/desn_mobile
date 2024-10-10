@@ -6,7 +6,7 @@ export default function Hobbies() {
     <View style={styles.container}>
 
       <View style={styles.navbar}>
-        <Link href="/app-pessoal/hobbies" style={styles.backButton}>
+        <Link href="/app-pessoal/app" style={styles.backButton}>
           Voltar
         </Link>
         <Text style={styles.navTitle}>Meus Hobbies</Text>

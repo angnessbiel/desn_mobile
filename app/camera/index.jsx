@@ -69,15 +69,15 @@ export default function Camera() {
                 <View style={styles.previewContainer}>
                     <Image style={styles.image} source={{ uri: foto.uri }} />
                     <View style={styles.sectionButton3}>
-                        <TouchableWithoutFeedback onPress={descartarFoto}>
-                            <Image
-                               source={require('../Camera/assets/lixo.png')}
-                               style={styles.buttonSecundario}
-                            />
-                        </TouchableWithoutFeedback>
                         <TouchableWithoutFeedback onPress={salvarFoto}>
                             <Image
-                               source={require('../Camera/assets/salvar.png')}
+                               source={require('./assets/save.png')}
+                               style={styles.buttonsave}
+                            />
+                        </TouchableWithoutFeedback>
+                        <TouchableWithoutFeedback onPress={descartarFoto}>
+                            <Image
+                               source={require('./assets/delet.png')}
                                style={styles.buttonSecundario}
                             />
                         </TouchableWithoutFeedback>
@@ -93,21 +93,22 @@ export default function Camera() {
                         <View style={styles.sectionButtons}>
                         <TouchableWithoutFeedback onPress={tirarFoto}>
                             <Image
-                               source={require('../Camera/assets/botao.png')}
+                               source={require('./assets/foto.png')}
                                 style={styles.buttonFoto}
                             />
                         </TouchableWithoutFeedback>
                         </View>
                         <View style={styles.sectionButtons2}>
-                        <TouchableWithoutFeedback onPress={inverterLadoCamera}>
+
+                        <TouchableWithoutFeedback onPress={() => setScanear(true)}>
                             <Image
-                               source={require('../Camera/assets/inverter.png')}
+                               source={require('./assets/qr.png')}
                                 style={styles.buttonSecundario}
                             />
                         </TouchableWithoutFeedback>
-                        <TouchableWithoutFeedback onPress={() => setScanear(true)}>
+                        <TouchableWithoutFeedback onPress={inverterLadoCamera}>
                             <Image
-                               source={require('../Camera/assets/qrcode.png')}
+                               source={require('./assets/invert.png')}
                                 style={styles.buttonSecundario}
                             />
                         </TouchableWithoutFeedback>
@@ -134,26 +135,27 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    sectionButton3: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between', 
-        alignItems: 'center', 
-        marginBottom: 80, 
-    },
+
     sectionButtons: {
         flex: 1,
         justifyContent: 'flex-end',
         alignItems: 'center',
-        marginTop: '150%',
+        paddingBottom: 20,
     },
     sectionButtons2: {
         display: 'flex',
         flexDirection: 'row', 
         justifyContent: 'space-around', 
         alignItems: 'center', 
-        marginBottom: 15,
+        marginBottom: 75,
     },
+    sectionButton3: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center', 
+        marginBottom: 75,
+    },    
     image: {
         width: '100%',
         height: '100%',
@@ -163,7 +165,13 @@ const styles = StyleSheet.create({
         height: 100,
     },
     buttonSecundario: {
-        width: 70, 
-        height: 70, 
+        width: 60, 
+        height: 55,
     },
+    buttonsave: {
+        width: 60, 
+        height: 55,
+        marginLeft: 30,
+    }
+    
 });

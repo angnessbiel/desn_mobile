@@ -10,10 +10,10 @@ export default function Page() {
             <Link href="/banco/banco" style={styles.link}>• Banco</Link>
             <Link href="/calculadora/calculadora" style={styles.link}>• Calculadora</Link>
             <Link href="/calculadora2/calculadora2" style={styles.link}>• Calculadora 2</Link>
-            <Link href="/listaPokemon/listaPokemon" style={styles.link}>• Pokémon</Link>
+            <Link href="/listapokemon/listapokemon" style={styles.link}>• Pokémon</Link>
             <Link href="/listaTarefa/listaTarefa" style={styles.link}>• Lista</Link>
             <Link href="/telaLogin" style={styles.link}>• Login</Link>
-            <Link href="/app-pessoal" style={styles.link}>• Sobre Mim</Link>
+            <Link href="/app-pessoal/app" style={styles.link}>• Sobre Mim</Link>
             <Link href="/ifome" style={styles.link}>• Ifome</Link>
             <Link href="/camera" style={styles.link}>• Camera</Link>
 
