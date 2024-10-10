@@ -15,6 +15,8 @@ export default function Page() {
             <Link href="/telaLogin" style={styles.link}>• Login</Link>
             <Link href="/app-pessoal" style={styles.link}>• Sobre Mim</Link>
             <Link href="/ifome" style={styles.link}>• Ifome</Link>
+            <Link href="/camera" style={styles.link}>• Camera</Link>
+
             </View>
         </View>
     );
