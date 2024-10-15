@@ -16,6 +16,8 @@ export default function Page() {
             <Link href="/app-pessoal/app" style={styles.link}>• Sobre Mim</Link>
             <Link href="/ifome" style={styles.link}>• Ifome</Link>
             <Link href="/camera" style={styles.link}>• Camera</Link>
+            <Link href="/selecionar-foto" style={styles.link}>• Galeria</Link>
+            <Link href="/memoria" style={styles.link}>• Memória</Link>
 
             </View>
         </View>
